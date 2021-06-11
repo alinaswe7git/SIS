@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule	^templates/(.*)$ - [L]
+RewriteRule	^lib/.*	- [L]
+RewriteRule	^installer/.* - [L]
+RewriteRule	^datastore/.* - [L]
+RewriteRule	^sqlma/.* - [L]
+RewriteRule	(.*)	index.php?id=$1  [QSA,L]

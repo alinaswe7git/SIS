@@ -1,0 +1,12 @@
+[core]
+	bare = true
+	repositoryformatversion = 0
+	filemode = false
+	symlinks = false
+	ignorecase = true
+[remote]
+	pushdefault = origin
+[remote "origin"]
+	url = administrator@41.63.16.41:/git/repo_16042018
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	pushurl = administrator@41.63.16.41:/git/repo_16042018

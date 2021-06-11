@@ -1,0 +1,27 @@
+# AddDefaultCharset	UTF-8
+AddType text/x-component .htc
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^favicon\.ico$ skins/larry/images/favicon.ico
+# security rules
+RewriteRule .git - [F]
+RewriteRule ^/?(README(.md)?|INSTALL|LICENSE|SQL|bin|CHANGELOG)$ - [F]
+</IfModule>
+
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+</IfModule>
+
+<IfModule mod_headers.c>
+# replace 'append' with 'merge' for Apache version 2.2.9 and later
+#Header append Cache-Control public env=!NO_CACHE
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+</IfModule>
+
+FileETag MTime Size
+
